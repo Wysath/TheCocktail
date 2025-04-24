@@ -1,35 +1,51 @@
-TheCocktail 🍹
-<img alt="Vue.js" src="https://img.shields.io/badge/Vue.js-3.5-brightgreen.svg">
-<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.8-blue.svg">
-<img alt="Tests" src="https://img.shields.io/badge/Tests-Vitest-success.svg">
-<img alt="Docker" src="https://img.shields.io/badge/Docker-Ready-informational.svg">
-Une application web élégante qui affiche 3 cocktails aléatoires depuis l'API TheCocktailDB. Ce projet présente une interface utilisateur soignée et moderne avec des animations fluides et un design responsive.
+# 🍹 TheCocktail
 
-<img alt="TheCocktail Preview" src="https://placeholder-for-screenshot.com/">
+![Vue.js](https://img.shields.io/badge/Vue.js-3.5-brightgreen.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)
+![Tests](https://img.shields.io/badge/Tests-Vitest-success.svg)
+![Docker](https://img.shields.io/badge/Docker-Ready-informational.svg)
 
-📋 Fonctionnalités
-Affichage de 3 cocktails aléatoires à chaque chargement de page
-Rafraîchissement des cocktails avec un bouton dédié
-Interface utilisateur animée avec transitions fluides
-Détails complets pour chaque cocktail :
-Nom, catégorie et type (alcoolisé ou non)
-Ingrédients avec mesures précises
-Instructions détaillées de préparation
-Type de verre recommandé
-Cartes de cocktail interactives qui s'expandent pour montrer plus de détails
-Design entièrement responsive adapté à tous les appareils
-Gestion des erreurs et états de chargement
-🛠️ Technologies utilisées
-Vue.js 3 - Framework front-end avec Composition API
-TypeScript - Pour un typage fort et une meilleure maintenabilité
-Pinia - Gestion d'état
-Vue Router - Routage côté client
-Vite - Build tool et serveur de développement
-Vitest & Vue Test Utils - Tests unitaires
-Playwright - Tests e2e
-Docker - Conteneurisation
+> Une application web élégante qui affiche **3 cocktails aléatoires** depuis l'API _TheCocktailDB_.  
+> Interface moderne, animations fluides et design responsive au rendez-vous.
 
-📦 Installation
+<p align="center">
+  <img alt="TheCocktail Preview" src="https://placeholder-for-screenshot.com/" width="600">
+</p>
+
+---
+
+## 📋 Fonctionnalités
+
+- 🎲 Affichage de **3 cocktails aléatoires** à chaque chargement
+- 🔄 Rafraîchissement des cocktails via un bouton dédié
+- 🌈 Interface animée avec transitions fluides
+- 🍸 Détails complets pour chaque cocktail :
+  - Nom, catégorie, type (alcoolisé ou non)
+  - Ingrédients avec mesures
+  - Instructions de préparation
+  - Type de verre recommandé
+- 🃏 Cartes interactives avec expansion pour plus d'infos
+- 📱 Design **responsive** pour tous les appareils
+- ❗ Gestion des erreurs & états de chargement
+
+---
+
+## 🛠️ Technologies utilisées
+
+- **Vue.js 3** – Framework front-end (Composition API)
+- **TypeScript** – Typage fort et maintenabilité
+- **Pinia** – Gestion d’état moderne
+- **Vue Router** – Routage SPA
+- **Vite** – Build tool ultra-rapide
+- **Vitest + Vue Test Utils** – Tests unitaires
+- **Playwright** – Tests end-to-end (e2e)
+- **Docker** – Conteneurisation simple
+
+---
+
+## 📦 Installation
+
+```bash
 # Cloner le dépôt
 git clone https://github.com/votre-username/TheCocktail.git
 cd TheCocktail
@@ -37,59 +53,90 @@ cd TheCocktail
 # Installer les dépendances
 npm install
 
-# Lancer le serveur de développement
+# Démarrer le serveur de développement
 npm run dev
+```
 
-L'application sera disponible à l'adresse http://localhost:5173.
+🔗 L'application sera accessible sur : [http://localhost:5173](http://localhost:5173)
 
-🚀 Déploiement avec Docker
-Un Dockerfile est fourni pour faciliter le déploiement :
+---
 
+## 🚀 Déploiement avec Docker
+
+```bash
 # Construire l'image Docker
 docker build -t thecocktail .
 
 # Lancer le conteneur
 docker run -p 8080:80 thecocktail
+```
 
-L'application sera disponible à l'adresse http://localhost:8080.
+🌍 L'application sera disponible sur : [http://localhost:8080](http://localhost:8080)
 
-🧪 Tests
-Ce projet comprend une suite complète de tests unitaires et e2e :
-# Exécuter les tests unitaires
+---
+
+## 🧪 Tests
+
+Suite de tests complète pour garantir la qualité du code :
+
+```bash
+# Lancer les tests unitaires
 npm run test:unit
 
-# Exécuter les tests e2e avec Playwright
+# Lancer les tests end-to-end
 npm run test:e2e
+```
 
-Couverture des tests
-L'application comprend des tests approfondis pour tous les composants principaux, avec une couverture particulière pour:
+✅ **Couverture des tests** :
 
-Rendu des informations de cocktails
-Interactivité des composants
-Gestion des cas limites (ingrédients manquants, etc.)
-Accessibilité
-Design responsive
-📁 Structure du projet
+- Rendu des informations de cocktails
+- Interactions et comportements utilisateurs
+- Gestion des cas limites (ex: ingrédients manquants)
+- Accessibilité
+- Design responsive
+
+---
+
+## 📁 Structure du projet
+
+```
 src/
-├── assets/         # Ressources statiques (CSS, images)
-├── components/     # Composants Vue réutilisables
-├── services/       # Services pour interagir avec l'API
-├── stores/         # Stores Pinia pour la gestion d'état
-├── types/          # Définitions de types TypeScript
-├── views/          # Composants de vue (pages)
-└── router/         # Configuration des routes
+├── assets/        # Ressources statiques (CSS, images)
+├── components/    # Composants Vue réutilisables
+├── services/      # Services d’appel API
+├── stores/        # Pinia pour gestion d’état
+├── types/         # Définition des types TypeScript
+├── views/         # Pages principales de l’app
+└── router/        # Configuration du routage
+```
 
-📱 Responsive Design
-L'application est entièrement responsive et fonctionne parfaitement sur :
+---
 
-Ordinateurs de bureau
-Tablettes
-Smartphones
+## 📱 Responsive Design
 
-✨ Fonctionnalités de l'API
-Ce projet utilise l'API TheCocktailDB pour récupérer les données des cocktails. L'endpoint principal utilisé est:
+Optimisé pour tous les formats :
 
-/random.php - Pour récupérer un cocktail aléatoire
+- 🖥️ Ordinateurs
+- 📱 Smartphones
+- 📟 Tablettes
 
-👤 Auteur
-Développé par Louna PETITFILS
+---
+
+## ✨ Utilisation de l’API
+
+Données récupérées depuis l’API _TheCocktailDB_ :  
+📡 Endpoint principal utilisé :
+
+```
+/random.php
+```
+
+Permet de récupérer un cocktail aléatoire.
+
+---
+
+## 👤 Auteur
+
+Développé avec ❤️ par **Louna PETITFILS**
+
+---
