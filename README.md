@@ -39,8 +39,6 @@
 - **Vite** – Build tool ultra-rapide
 - **Vitest + Vue Test Utils** – Tests unitaires
 - **Playwright** – Tests end-to-end (e2e)
-- **Docker** – Conteneurisation simple
-
 ---
 
 ## 📦 Installation
@@ -58,20 +56,6 @@ npm run dev
 ```
 
 🔗 L'application sera accessible sur : [http://localhost:5173](http://localhost:5173)
-
----
-
-## 🚀 Déploiement avec Docker
-
-```bash
-# Construire l'image Docker
-docker build -t thecocktail .
-
-# Lancer le conteneur
-docker run -p 8080:80 thecocktail
-```
-
-🌍 L'application sera disponible sur : [http://localhost:8080](http://localhost:8080)
 
 ---
 
