@@ -1,12 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --primary-color: hsla(160, 100%, 37%, 1);
-  --primary-hover: hsla(160, 100%, 30%, 1);
-  --accent-color: #ff9500;
-  --dark-color: #1c1c1c;
+  /* Couleurs principales avec meilleur contraste */
+  --primary-color: #ff1744;
+  --primary-hover: #d50000;
+  --secondary-color: #7c4dff;
+  --accent-color: #ff6d00;
+  --accent-light: #ff9800;
+  
+  /* Couleurs de base améliorées */
+  --dark-color: #0d1421;
+  --darker-color: #1a252f;
   --light-color: #ffffff;
-  --background-gradient: linear-gradient(135deg, #13547a 0%, #80d0c7 100%);
+  --text-light: #f8f9fa;
+  --text-muted: #e1e8ed;
+  --text-secondary: #adb5bd;
+  
+  /* Couleurs d'état */
+  --success-color: #00c851;
+  --warning-color: #ffbb33;
+  --error-color: #ff4444;
+  
+  /* Backgrounds avec meilleur contraste */
+  --background-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 35%, #6a11cb 100%);
+  --card-gradient: linear-gradient(145deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.08) 100%);
+  --card-dark-gradient: linear-gradient(145deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 100%);
+  
+  /* Ombres améliorées */
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.2);
+  
+  /* Bordures */
+  --border-light: rgba(255, 255, 255, 0.3);
+  --border-dark: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -14,6 +45,40 @@ body {
   padding: 0;
   background: var(--background-gradient) fixed;
   font-family: 'Poppins', sans-serif;
-  color: var(--light-color);
+  color: var(--text-light);
   min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Glassmorphism utilities améliorées */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-dark);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Classes utilitaires pour le texte */
+.text-contrast {
+  color: var(--text-light);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-primary {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.text-accent {
+  color: var(--accent-color);
+  font-weight: 600;
 }
